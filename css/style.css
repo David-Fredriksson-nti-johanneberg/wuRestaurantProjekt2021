@@ -1,0 +1,49 @@
+#container {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    grid-template-areas: 
+    
+    "na na na"
+    "he he he"
+    "ma ma ma"
+    "ma ma ma"
+    "ma ma ma"
+    "ft ft ft"
+    ;
+
+    grid-gap: 2px;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+
+}
+
+nav {
+    grid-area: na;
+    background-color: burlywood;
+    text-align: center;
+}
+
+header {
+    grid-area: he;
+    background-color: blanchedalmond;
+    text-align: center;
+    
+    
+}
+
+main {
+    grid-area: ma;
+    background-color: darkkhaki;
+    text-align: center;
+}
+
+
+footer {
+    grid-area: ft;
+    background-color: cyan;
+    text-align: center;
+}
+
