@@ -4,11 +4,16 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+}
+
+body, html {
+    scroll-behavior: smooth;
 }
 
 #container {
     display: grid;
-    height: 100vh;
+    height: 200vh;
     width: 100vw;
     max-width: 100%;
     grid-template-areas: 
@@ -16,9 +21,9 @@
     
     "na na"
     "he he"
-    "ma ma"
-    "ma ma"
-    "ma ma"
+    "ma si"
+    "ma si"
+    "ma si"
     "ft ft"
     ;
 
@@ -35,7 +40,7 @@
 li, a {
     font-family: Playfair Display;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 25px;
     color: antiquewhite;
     text-decoration: none;
 }
@@ -43,9 +48,9 @@ li, a {
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 30px 10%;
+    padding: 30px;
     grid-area: na;
-    background-color: rgb(49, 48, 47);
+    background-color: rgb(24, 23, 22);
     align-items: center;
 
     
@@ -53,6 +58,11 @@ nav {
 
 header {
     grid-area: he;
+    text-align: center;
+    padding: 110px;
+    font-family: Playfair Display;
+    font-size: 30px;
+    background-color: cornsilk;
 }
 
 .logga {
@@ -63,32 +73,53 @@ header {
     list-style: none;
 }
 
-.links li {
+.links, li {
     display: inline-block;
     padding: 0 20px;
 }
 
-.links li a{
+.links, li, a{
     transition: all 0.1s ease 0s;
 
 }
 
-.links li a:hover{
-color: rgb(0, 102, 255);
+.links, li, a:hover{
+    color: rgb(64, 90, 128);
     
 }
 
 main {
     grid-area: ma;
-    background-color: darkkhaki;
-    text-align: center;
+    background-color: rgb(24, 23, 22);
+    text-align: left;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 25px;
+}
 
+side {
+    grid-area: si;
+    background-color: rgb(24, 23, 22);
+    padding-top: 30px;
+    font-size: 25px;
+}
+
+h1 {
+    color: rgb(214, 209, 187);
+    text-align: center;
+}
+
+p {
+color: cornsilk;
 }
 
 
 footer {
     grid-area: ft;
-    background-color: cyan;
+    background-color: rgb(24, 23, 22);
     text-align: center;
+    padding-top: 30px;
+
 }
 
