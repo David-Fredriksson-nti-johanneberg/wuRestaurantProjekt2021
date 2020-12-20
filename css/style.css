@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -11,9 +12,9 @@ body, html {
     scroll-behavior: smooth;
 }
 
-#container {
+#start {
     display: grid;
-    height: 200vh;
+    height: 175vh;
     width: 100vw;
     max-width: 100%;
     grid-template-areas: 
@@ -21,20 +22,74 @@ body, html {
     
     "na na"
     "he he"
-    "ma si"
-    "ma si"
-    "ma si"
-    "ft ft"
+    "ma as"
+    "ma as"
+    "ma as"
+    "ma as"
+    "ma as"
+    "ma as"
+    "ma as"
+    "ad ad"
     ;
 
-    grid-gap: 2px;
+    grid-gap: 1px;
     text-align: center;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(10, 1fr);
     margin: 0px;
 
 }
 
+#booking {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    grid-template-areas: 
+    
+    
+    "na na na"
+    "he as as"
+    "se as as"
+    "se as as"
+    "se ar ar"
+    "se ar ar"
+    "se ar ar"
+    "ad ad ad"
+    ;
+
+    grid-gap: 1px;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    margin: 0px;
+}
+
+#menu {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    grid-template-areas: 
+    
+    
+    "na na"
+    "he ma"
+    "se ar"
+    "se ar"
+    "as ar"
+    "as ar"
+    "ft ar"
+    "ft ar"
+    "ad ad"
+ ;
+
+    grid-gap: 1px;
+    text-align: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    margin: 0px;
+}
 
 
 li, a {
@@ -52,16 +107,21 @@ nav {
     grid-area: na;
     background-color: rgb(24, 23, 22);
     align-items: center;
-
-    
 }
 
-header {
+img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.main_head {
     grid-area: he;
     text-align: center;
     padding: 110px;
     font-family: Playfair Display;
-    font-size: 30px;
+    font-size: 35px;
     background-color: cornsilk;
 }
 
@@ -73,53 +133,257 @@ header {
     list-style: none;
 }
 
-.links, li {
+.links li {
     display: inline-block;
     padding: 0 20px;
 }
 
-.links, li, a{
+.links li a{
     transition: all 0.1s ease 0s;
 
 }
 
-.links, li, a:hover{
+.links li a:hover{
     color: rgb(64, 90, 128);
     
 }
 
-main {
+.starting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     grid-area: ma;
     background-color: rgb(24, 23, 22);
     text-align: left;
-    padding-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 30px;
     font-size: 25px;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), url("/img/ali-yahya-VCJgvwJbC50-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-side {
-    grid-area: si;
+.sidan {
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    grid-area: as;
     background-color: rgb(24, 23, 22);
-    padding-top: 30px;
+    padding: 30px;
     font-size: 25px;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), url("/img/moritz-knoringer-4nEurXIrFxY-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+} 
+
+
+/*booking*/
+
+
+.header {
+    grid-area: he;
+    display: flex;
+    background-color: rgb(24, 23, 22);
+    justify-content: center;
+    align-items: center;
 }
+
+.aside {
+    grid-area: as;
+    display: flex;
+    background-color: rgb(24, 23, 22);
+    justify-content: center;    
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), url("/img/erik-mclean-NdofAuS4BVY-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.section {
+    grid-area: se;
+    display: flex;
+    background-color: rgb(24, 23, 22);
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.tables {
+    overflow-y: scroll;
+}
+
+.tables li {
+    list-style: none; 
+    transition: all 0.1s ease 0s;
+}
+
+.tables a {
+    font-size: 75px;
+}
+
+.tables li a:hover{
+    color: rgb(64, 90, 128);
+    
+}
+
+.article {
+    grid-area: ar;
+    display: flex;
+    background-color: rgb(24, 23, 22);
+    justify-content: center;
+    font-size: 25px;
+    padding: 30px;
+    align-items: center;
+}
+
+
+/*menu*/
+
+
+.menu_header {
+    grid-area: he;
+    display: flex;
+    background-color: rgb(24, 23, 22);
+    justify-content: center;
+}
+
+.menu_section {
+    grid-area: se;
+    display: flex;
+    background-color: rgb(24, 23, 22);
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), url("/img/onion_soup.JPG");
+    background-size: cover;
+    background-position: center;
+}
+
+.menu_main {
+    grid-area: ma;
+    display: flex;
+    background-color: rgb(24, 23, 22);
+    justify-content: center;
+
+}
+
+.menu_footer {
+    grid-area: ft;
+    display: flex;
+    background-color: rgb(24, 23, 22);
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), url("/img/The-Perfect-Baked-Potato-square.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.menu_footer h1 {
+    transition: all 0.1s ease 0s;
+}
+
+.menu_footer h1:hover{
+    color: rgb(64, 81, 128);
+}
+
+.menu_aside {
+    grid-area: as;
+    display: flex;
+    background-color: rgb(24, 23, 22);
+    justify-content: center; 
+    align-items: center;   
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), url("/img/20180824_Roasted-Venison-Loin_RE_HE.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.menu_aside h1 {
+    transition: all 0.1s ease 0s;
+}
+
+.menu_aside h1:hover{
+    color: rgb(64, 81, 128);
+    
+}
+
+.menu_article {
+    grid-area: ar;
+    display: flex;
+    background-color: rgb(24, 23, 22);
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+.menu_section h1 {
+    transition: all 0.1s ease 0s;
+}
+
+.menu_section h1:hover{
+    color: rgb(64, 81, 128);
+    
+}
+
+.drinks li {
+    list-style: none;
+    transition: all 0.1s ease 0s;
+}
+
+.drinks li a:hover{
+    color: rgb(128, 64, 64);
+    
+}
+
+.drinks a{
+    font-size: 50px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+
 
 h1 {
+    color: cornsilk;
+    text-align: center;
+    font-size: 50px;
+    font-family: Playfair Display;
+}
+
+h3 {
     color: rgb(214, 209, 187);
     text-align: center;
+    font-size: 25px;
 }
 
 p {
 color: cornsilk;
 }
 
+p1 {
+    font-size: 20px;
+}
 
-footer {
-    grid-area: ft;
+
+address {
+    grid-area: ad;
     background-color: rgb(24, 23, 22);
-    text-align: center;
-    padding-top: 30px;
-
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
 }
 
